@@ -1,0 +1,65 @@
+---
+import Main from "../layouts/Main.astro";
+import Cards from "../components/Cards.astro";
+
+const profilePicture = "https://i.imgur.com/JPGFE75.jpg";
+---
+
+<Main title="Home">
+  <div class="profile">
+    <img
+      src={profilePicture}
+      class="profile__picture"
+      alt="Agustin Saravia's headshot photo."
+    />
+    <div class="profile__details">
+      <h1>Agustin Saravia</h1>
+      <h2>Jr Developer</h2>
+      <p>
+        Driving innovation and efficiency through collaborative teamwork to
+        achieve organizational success and elevate team performance.
+      </p>
+    </div>
+  </div>
+  <Cards
+    cards={[
+      {
+        title: "Here are my personal projects",
+        gradientFrom: " #06fa3d ",
+        gradientTo: " #06faea ",
+        to: "/projects",
+      },
+      {
+        title: "A glimpse into my work history",
+        gradientFrom: "#fde68a",
+        gradientTo: "  #ceff00  ",
+        to: "/work-summary",
+      },
+      {
+        title: "Get to know the person behind the projects.",
+        gradientFrom: "  #ffc100  ",
+        gradientTo: " #ff0c00 ",
+        to: "/beyond-tech",
+      },
+    ]}
+  />
+</Main>
+<style>
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    place-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0 3rem 0;
+  }
+
+  .profile__details {
+    flex: 1 o 300px;
+  }
+
+  .profile__picture {
+    border-radius: 50%;
+    padding: 1rem;
+  }
+</style>
