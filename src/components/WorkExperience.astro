@@ -1,0 +1,31 @@
+---
+const {
+  jobPosition,
+  jobJoinDate,
+  jobLastDate,
+  jobOrganization,
+  jobDescription,
+} = Astro.props;
+---
+
+<section>
+  <div>
+    <h3>
+      <b
+        >{jobJoinDate}
+        {!jobLastDate && !jobJoinDate ? "Currently" : jobLastDate} - {
+          jobPosition
+        }</b
+      >
+    </h3>
+    <span><b>{jobOrganization}</b></span>
+    <p>{jobDescription}</p>
+  </div>
+</section>
+
+<style>
+  span {
+    font-size: 0.89rem;
+    color: #998dd9;
+  }
+</style>

@@ -2,23 +2,34 @@ body {
     font-family: "Inter", sans-serif;
     padding: 0 0.5rem;
     color: var(--grey-600);
-    background: var(--background)
+    background: var(--background);
+
+}
+
+body,
+html {
+    box-sizing: border-box;
+    height: 100svh;
+    margin: 0;
 }
 
 html {
-    --background: white;
+    --background: #f9f9f9;
     --grey-200: #222222;
     --grey-400: #444444;
     --grey-600: #333333;
     --grey-900: #111111;
+    --button-cream: #fcc998;
+    --white-200: #F0F8ff
 }
 
 html.dark {
     --background: #222222;
-    --grey-200: #eaeaea;
-    --grey-400: #acacac;
+    --grey-200: #acacac;
+    --grey-400: #eaeaea;
     --grey-600: #ffffff;
     --grey-900: #fafafa;
+    --white-200: #F8F8ff;
 }
 
 p,

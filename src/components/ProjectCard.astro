@@ -1,0 +1,84 @@
+---
+import Projects from "../pages/projects.astro";
+import { Icon } from "astro-icon/components";
+
+const { projectImage, projectName, projectDescription, projectUrl } =
+  Astro.props;
+---
+
+<div class="card">
+  <picture>
+    <source media="(min-width:650px)" srcset={projectImage} />
+    <img src={projectImage} width="auto" alt="Foto" />
+  </picture>
+  <div class="text">
+    <h1>{projectName}</h1>
+    <p>{projectDescription}</p>
+
+    <a
+      href={projectUrl}
+      class="projectUrl"
+      referrerpolicy="no-referrer"
+      target="_blank">Go to</a
+    >
+  </div>
+
+  <style>
+    h3 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.3rem;
+    }
+    .card {
+      margin: auto;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      place-content: center;
+    }
+    .card__textContainer {
+      flex-wrap: wrap;
+    }
+    .text__button {
+      width: calc(10.5rem);
+      height: 2.6rem;
+      border-radius: 0.5rem;
+      background: var(--button-cream);
+      font-size: 1.25rem;
+    }
+
+    .projectUrl {
+      font-weight: bolder;
+      cursor: pointer;
+      color: var(--white-200);
+      text-decoration: none;
+      background: var(--grey-200);
+      padding: 0.4rem 2rem 0.4rem 2rem;
+      border-radius: 10px;
+    }
+    img {
+      width: 100%;
+      max-width: 650px;
+      height: auto;
+      border-radius: 1rem;
+    }
+    @media screen and (max-width: 300px) {
+      img {
+        width: 400px;
+      }
+      .card__imageContainer {
+        max-width: 300px;
+      }
+    }
+    @media screen and (min-width: 720px) {
+      img {
+        width: 700px;
+        object-fit: contain;
+      }
+      .card__imageContainer {
+        max-width: 300px;
+      }
+    }
+  </style>
+</div>

@@ -1,0 +1,49 @@
+---
+import Main from "../layouts/Main.astro";
+import WorkExperience from "../components/WorkExperience.astro";
+---
+
+<Main title="Experience">
+  <h2>Work Experience</h2>
+  <WorkExperience
+    jobPosition="Application Support"
+    jobOrganization="Tata Consultancy Services"
+    jobDescription="Provide  technical support to customers using Power Automate and Power Apps Canvas Apps. Stay up to date with the best practices and latest features proven track record of resolving complex technical issues, collaborating with development teams, and maintaining technical expertise in Power Platform "
+  />
+  <WorkExperience
+    jobJoinDate="05/03/2023 - "
+    jobLastDate="06/09/2023"
+    jobPosition="Technical Assistant"
+    jobOrganization="Duodyn"
+    jobDescription=`Repaired modems, addressing both hardware and software issues to ensure functionality.
+Diagnosed and resolved faults to ensure optimal performance. Managed modem inventory
+with precision to ensure availability of components. Coordinated logistics for punctual
+and efficient deliveries. Focused on providing effective technical solutions and
+maintaining high levels of customer satisfaction`
+  />
+  <WorkExperience
+    jobPosition="Freelance Web Developer"
+    jobJoinDate="06/06/2023 - "
+    jobLastDate="12/09/2023"
+    jobOrganization="Freelance"
+    jobDescription=`Demonstrated advanced skills in HTML, CSS, and JavaScript to create a visually appealing and user-friendly
+interface.
+Implemented interactive features and smooth navigation, enhancing user engagement and interaction.
+Showcased expertise in leveraging cutting-edge technologies to deliver a modern and efficient web solution.
+Contributed to the project's success by ensuring the website met the client's requirements and exceeded
+expectations.`
+  />
+
+  <style>
+    h2 {
+      font-size: 4rem;
+      color: #998dd9;
+    }
+
+    @media screen and (min-width: 720px) {
+      h2 {
+        font-size: 6.3rem;
+      }
+    }
+  </style>
+</Main>

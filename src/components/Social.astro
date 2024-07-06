@@ -1,0 +1,62 @@
+---
+import { Icon } from "astro-icon/components";
+const socialLinks = [
+  {
+    name: "GitHub",
+    icon: "mdi:github",
+    url: "https://github.com/AgusSaravia",
+  },
+  {
+    name: "LinkedIn",
+    icon: "mdi:linkedin",
+    url: "https://linkedin.com/in/saravia-agustin",
+  },
+];
+---
+
+<div class="socialContainer">
+  <ul class="socialContainer__links">
+    {
+      socialLinks.map((link) => (
+        <li>
+          <a href={link.url} target="_blank" rel="noopener noreferrer">
+            <Icon name={link.icon}>{link.name}</Icon>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style>
+  footer {
+    /* Applies top and bottom paddings */
+    padding: 0.5rem 0;
+    /* Centers the text content */
+    text-align: center;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  .socialContainer {
+    margin: auto;
+    max-width: 100px;
+  }
+  .socialContainer__links {
+    display: flex;
+    justify-content: center;
+
+    gap: 1rem;
+  }
+</style>
+
+<style>
+  [data-icon] {
+    font-size: 2.6rem;
+    color: var(--grey-600);
+  }
+</style>
