@@ -3,62 +3,71 @@ import Main from "../layouts/Main.astro";
 ---
 
 <Main title="Beyond technology">
-  <h1 class="about-me">About me</h1>
+  <div class="beyond-tech_container">
+    <h1 class="about-me">About me</h1>
 
-  <h2 class="salute">Hey there!</h2>
-  <p>
-    I live in Montevideo, Uruguay, more precisely on the west side of town. I
-    live with my partner and my two wonderful cats <span class="Milo">Milo</span
-    > and <span class="Ares">Ares</span>
-  </p>
-  <section class="container">
-    <div class="slider-wrapper">
-      <div class="slider">
-        <img
-          src="../AresyMilo1.webp"
-          alt="Photo of my beloved mascots"
-          id="slide-1"
-        />
-        <img
-          src="../AresyMilo2.webp"
-          alt="Photo of my beloved mascots"
-          id="slide-2"
-        />
-        <img
-          src="../AresyMilo3.webp"
-          alt="Photo of my beloved mascots"
-          id="slide-3"
-        />
-        <div class="slider-nav">
-          <a href="#slide-1"></a>
-          <a href="#slide-2"></a>
-          <a href="#slide-3"></a>
+    <p class="first_paragraph">
+      I live in Montevideo, Uruguay, more precisely on the west side of town. I
+      live with my partner and my two wonderful cats <span class="Milo"
+        >Milo</span
+      > and <span class="Ares">Ares.</span>
+    </p>
+    <section class="container">
+      <div class="slider-wrapper">
+        <div class="slider">
+          <img
+            src="../AresyMilo1.webp"
+            alt="Photo of my beloved mascots"
+            id="slide-1"
+          />
+          <img
+            src="../AresyMilo2.webp"
+            alt="Photo of my beloved mascots"
+            id="slide-2"
+          />
+          <img
+            src="../AresyMilo3.webp"
+            alt="Photo of my beloved mascots"
+            id="slide-3"
+          />
+          <div class="slider-nav">
+            <a href="#slide-1" no></a>
+            <a href="#slide-2"></a>
+            <a href="#slide-3"></a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <p>
-    When I'm not on my computer I like to take care of my <span class="Plants"
-      >plants</span
-    >, throughout my childhood taking care of plants have been a part of my
-    life. My mother taught me how to, she had a little farm back then so I grew
-    up in an amazing natural environment
-  </p>
+    </section>
+    <p>
+      When I'm not on my computer I like to take care of my <span class="Plants"
+        >plants</span
+      >, throughout my childhood taking care of plants have been a part of my
+      life. My mother taught me how to, she had a little farm back then so I
+      grew up in an amazing natural environment
+    </p>
 
-  <p>
-    If I'm not taking care of the <span class="Plants">plants</span> or playing with
-    my cats. I could be playing video games or studying something that caught my
-    attention. I've always liked to learn new things, but now that I'm growing in
-    IT learning is something that I try to do everyday, we all know how technology
-    grows each day. So, to me it is really important to stay up to date with the
-    latest news.
-  </p>
+    <p>
+      If I'm not taking care of the <span class="Plants">plants</span> or playing
+      with my cats. I could be playing video games or studying something that caught
+      my attention. I've always liked to learn new things, but now that I'm growing
+      in IT learning is something that I try to do everyday, we all know how technology
+      grows each day. So, to me it is really important to stay up to date with the
+      latest news.
+    </p>
+  </div>
 </Main>
 
 <style>
   h1 {
     text-align: center;
     font-size: 5rem;
+  }
+  p {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  .first_paragraph {
+    margin-top: -1rem;
   }
 
   .Ares,
