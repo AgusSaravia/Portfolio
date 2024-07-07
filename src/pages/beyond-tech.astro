@@ -3,12 +3,149 @@ import Main from "../layouts/Main.astro";
 ---
 
 <Main title="Beyond technology">
-  <h1>About me</h1>
+  <h1 class="about-me">About me</h1>
+
+  <h2 class="salute">Hey there!</h2>
+  <p>
+    I live in Montevideo, Uruguay, more precisely on the west side of town. I
+    live with my partner and my two wonderful cats <span class="Milo">Milo</span
+    > and <span class="Ares">Ares</span>
+  </p>
+  <section class="container">
+    <div class="slider-wrapper">
+      <div class="slider">
+        <img
+          src="../AresyMilo1.webp"
+          alt="Photo of my beloved mascots"
+          id="slide-1"
+        />
+        <img
+          src="../AresyMilo2.webp"
+          alt="Photo of my beloved mascots"
+          id="slide-2"
+        />
+        <img
+          src="../AresyMilo3.webp"
+          alt="Photo of my beloved mascots"
+          id="slide-3"
+        />
+        <div class="slider-nav">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <p>
+    When I'm not on my computer I like to take care of my <span class="Plants"
+      >plants</span
+    >, throughout my childhood taking care of plants have been a part of my
+    life. My mother taught me how to, she had a little farm back then so I grew
+    up in an amazing natural environment
+  </p>
+
+  <p>
+    If I'm not taking care of the <span class="Plants">plants</span> or playing with
+    my cats. I could be playing video games or studying something that caught my
+    attention. I've always liked to learn new things, but now that I'm growing in
+    IT learning is something that I try to do everyday, we all know how technology
+    grows each day. So, to me it is really important to stay up to date with the
+    latest news.
+  </p>
 </Main>
 
 <style>
   h1 {
     text-align: center;
     font-size: 5rem;
+  }
+
+  .Ares,
+  .Milo,
+  .Plants {
+    font-weight: bolder;
+    font-size: large;
+  }
+
+  .Ares {
+    color: orange;
+  }
+  .Milo {
+    color: grey;
+  }
+  .Plants {
+    color: green;
+  }
+  .salute {
+    font-weight: bolder;
+    font-size: 1.7rem;
+  }
+  .about-me {
+    color: orangered;
+  }
+
+  .container {
+    padding: 2rem;
+  }
+
+  .slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+  .slider {
+    display: flex;
+    aspect-ratio: 16/11;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+  }
+  .slider img {
+    object-fit: cover;
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+  }
+  .slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    z-index: 1;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .slider a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+  }
+  .slider-nav a:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .slider-wrapper {
+      max-width: 95vw; /* Further adjust max-width */
+    }
+
+    .slider {
+      aspect-ratio: 4/3; /* Adjust aspect ratio for smaller screens */
+    }
+
+    .slider-nav {
+      bottom: 0.75rem; /* Reduce bottom spacing on smaller screens */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .slider-nav {
+      column-gap: 0.5rem; /* Reduce gap between navigation dots */
+    }
   }
 </style>
