@@ -55,26 +55,9 @@ const { projectImage, projectName, projectDescription, projectUrl } =
     }
     img {
       width: 100%;
-      max-width: 650px;
-      height: auto;
+      max-width: 48rem;
       border-radius: 1rem;
-    }
-    @media screen and (max-width: 300px) {
-      img {
-        width: 400px;
-      }
-      .card__imageContainer {
-        max-width: 300px;
-      }
-    }
-    @media screen and (min-width: 720px) {
-      img {
-        width: 700px;
-        object-fit: contain;
-      }
-      .card__imageContainer {
-        max-width: 300px;
-      }
+      object-fit: cover;
     }
   </style>
 </div>
