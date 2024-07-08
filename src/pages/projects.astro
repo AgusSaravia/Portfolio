@@ -5,22 +5,27 @@ import Main from "../layouts/Main.astro";
 
 <Main title="Projects">
   <h1 class="projects__title">Projects</h1>
-
-  <ProjectCard
-    projectImage="../Xanart-Image.webp"
-    projectName="Xanart Tattoo"
-    projectDescription="Landing page for a tattoo business"
-    projectUrl="https://xanart-portofolio.netlify.app/"
-  />
-  <ProjectCard
-    projectImage="../dollar_bot_pic.webp"
-    projectName="Telegram Dollar Bot"
-    projectDescription="A bot that retrieves the dollar value from a Uruguayan exchange"
-    projectUrl="https://github.com/AgusSaravia/Telegram-dollar-bot"
-  />
+  <div class="container">
+    <ProjectCard
+      projectImage="../Xanart-Image.webp"
+      projectName="Xanart Tattoo"
+      projectDescription="Landing page for a tattoo business"
+      projectUrl="https://xanart-portofolio.netlify.app/"
+    />
+    <ProjectCard
+      projectImage="../dollar_bot_pic.webp"
+      projectName=" Dollar Bot"
+      projectDescription="A bot that retrieves the dollar value from a Uruguayan exchange"
+      projectUrl="https://github.com/AgusSaravia/Telegram-dollar-bot"
+    />
+  </div>
 </Main>
-
 <style>
+  .container {
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+  }
   h1 {
     --text-2xl: 7rem;
     --text-md: 3.5rem;
@@ -31,6 +36,9 @@ import Main from "../layouts/Main.astro";
     h1 {
       font-size: var(--text-md);
       text-align: center;
+    }
+    .container {
+      flex-direction: column;
     }
   }
 </style>

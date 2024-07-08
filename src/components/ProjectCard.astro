@@ -4,60 +4,67 @@ const { projectImage, projectName, projectDescription, projectUrl } =
 ---
 
 <div class="card">
-  <picture>
-    <img src={projectImage} width="auto" alt="Foto" />
-  </picture>
-  <div class="text">
-    <h1>{projectName}</h1>
-    <p>{projectDescription}</p>
+  <h2>{projectName}</h2>
+  <a href={projectUrl} referrerpolicy="no-referrer" target="_blank">
+    <img src={projectImage} alt="Project photo" /></a
+  >
 
-    <a
-      href={projectUrl}
-      class="projectUrl"
-      referrerpolicy="no-referrer"
-      target="_blank">Go to</a
-    >
+  <div class="text">
+    <p>{projectDescription}</p>
   </div>
 
-  <style>
-    h3 {
-      font-size: 2rem;
-    }
-    p {
-      font-size: 1.3rem;
-    }
-    .card {
-      margin: auto;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      place-content: center;
-    }
-    .card__textContainer {
-      flex-wrap: wrap;
-    }
-    .text__button {
-      width: calc(10.5rem);
-      height: 2.6rem;
-      border-radius: 0.5rem;
-      background: var(--button-cream);
-      font-size: 1.25rem;
-    }
-
-    .projectUrl {
-      font-weight: bolder;
-      cursor: pointer;
-      color: var(--white-200);
-      text-decoration: none;
-      background: var(--grey-200);
-      padding: 0.4rem 2rem 0.4rem 2rem;
-      border-radius: 10px;
-    }
-    img {
-      width: 100%;
-      max-width: 48rem;
-      border-radius: 1rem;
-      object-fit: cover;
-    }
-  </style>
+  <a
+    class="text__button"
+    href={projectUrl}
+    referrerpolicy="no-referrer"
+    target="_blank">Go to</a
+  >
 </div>
+<style>
+  h3 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+  .text {
+    max-width: 100%;
+    height: 100%;
+  }
+  .card {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .text__button {
+    font-size: 1.25rem;
+    font-weight: bolder;
+    cursor: pointer;
+    color: var(--white-200);
+    background: var(--grey-200);
+    padding: 0.4rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .text__button:hover {
+    background-color: grey;
+  }
+  img {
+    width: 100%;
+    max-width: 48rem;
+    border-radius: 1rem;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+  }
+  @media (max-width: 786px) {
+    .text__button {
+      padding: 1rem 0.5rem;
+    }
+  }
+</style>
